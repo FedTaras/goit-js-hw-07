@@ -11,7 +11,7 @@ function createGallery(images) {
   return galleryItems
     .map(({ preview, original, description }) => {
       return `<div class="gallery__item">
-       <a class="gallery__link" href="${original} " rel="noreferrer noopener">
+       <a class="gallery__link" href="${original}">
         <img
           src="${preview}"
           class="gallery__image"
@@ -28,6 +28,7 @@ function createGallery(images) {
 divGalleryRef.addEventListener("click", onDivGalleryClick);
 
 function onDivGalleryClick(evt) {
+  evt.preventDefault();
   if (evt.target.nodeName !== "IMG") {
     return;
   }
