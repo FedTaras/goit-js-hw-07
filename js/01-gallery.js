@@ -33,13 +33,12 @@ function onDivGalleryClick(evt) {
     return;
   }
   console.log(evt.target.dataset.source);
-  document.querySelector(".gallery__image").onclick = () => {
-    basicLightbox
-      .create(
-        `
+
+  basicLightbox
+    .create(
+      `
     <img width="1400" height="900" src="${evt.target.dataset.source}">
 `
-      )
-      .show();
-  };
+    )
+    .show();
 }
