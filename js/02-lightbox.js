@@ -31,7 +31,7 @@ function onDivGalleryClick(evt) {
   }
 
   var lightbox = new SimpleLightbox(".gallery a", {
-    // download: ${description},
-    // animationSpeed: 250,
+    captionsData: "alt",
+    captionDelay: 250,
   });
 }
